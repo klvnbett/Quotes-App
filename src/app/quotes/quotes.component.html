@@ -1,1 +1,10 @@
-<p>quotes works!</p>
+<div>
+    <h1>{{title|titlecase</h1>
+    <ul>
+        <li *ngFor='let quote of quotes'>
+            {{quotes.name}}
+            <app-quotes-detail [quotes]='quotes'></app-quotes-detail>
+
+        </li>
+    </ul>
+</div>
