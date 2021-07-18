@@ -7,6 +7,8 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes-detail.component.css']
 })
 export class QuotesDetailComponent implements OnInit {
+  @Input() quotes:Quotes;
+
 
   constructor() { }
 

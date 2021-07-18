@@ -1,0 +1,13 @@
+<div>
+    <h1>{{title|titlecase</h1>
+    <ul>
+        <div *ngFor='let quote of quotes; let i =index'>
+            <li>
+                {{quotes.name}}
+                <app-quotes-detail [quotes]='quotes'></app-quotes-detail>
+
+            </li>
+        </div>
+
+    </ul>
+</div>
