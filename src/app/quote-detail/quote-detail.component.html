@@ -4,4 +4,9 @@
     <p>Author{{quote.author}}</p>
     <p>Submitted By{{quote.submittedBy:}}</p>
 
+    {{likes}}
+    <button (click)="clickCount_likes()"id="likes">Likes </button>
+    {{dislikes}}
+    <button (click)="clickCount_dislikes" id="dislikes">dislikes</button>
+
 </span>
