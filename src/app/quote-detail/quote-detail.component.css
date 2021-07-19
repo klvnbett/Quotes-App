@@ -1,0 +1,14 @@
+#likes {
+    margin-left: 13px;
+    background-color: green;
+}
+
+#dislikes {
+    margin-left: 13px;
+    background-color: yellow;
+}
+
+#delete {
+    margin-left: 13px;
+    background-color: red;
+}
