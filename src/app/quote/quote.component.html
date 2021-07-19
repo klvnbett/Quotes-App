@@ -1,10 +1,28 @@
-<div class="container bg-success">
+<div class="container">
     <hr>
-    <!-- <h1>{{title|titlecase</h1> -->
+    <h1>{{title|titlecase</h1>
+    <hr>
     <div class="row">
 
         <div class="col-md-6">
-            <app-quote-form (addQuote)="addNewQuote($event"></app-quote-form>
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
     </div>
+</div>
+<div class="container ">
+    <div class="col-sm-9">
+        <div class="all-cards">
+            <div *ngFor="let quote of sortQuotes, let i= index" class="card" style="width: 26rem;">
+                <div class="card-body">
+                    <h4 class="card-title" appQouteHighlight>{{quote.name}} {{quote.maxlikes}}<button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button">See More</button></h4>
+                    <p class="card-text" id="param">{{quote.quote}}</p>
+                    <app-quote-details *ngIf='quote.showInfo' bind-quote='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
+                    <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.submittedBy}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

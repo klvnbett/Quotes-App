@@ -1,5 +1,11 @@
 <div class="container-fluid">
     <h3> Input Your QUote</h3>
-    <form (ngSubmit)='addQuote() ;quotesform.resetForm({})' #quotesForm='ngForm'></form>
+    <form (ngSubmit)='addQuote() ;quotesform.resetForm({})' #quotesForm='ngForm'>
+        <div class="form-group">
+            <label for="name">Enter your Name</label>
+            <input type="text" required class="form-control" id="name" [(ngModel)]="quoted.name" name="name" #name='ngModel'>
+
+        </div>
+    </form>
 
 </div>

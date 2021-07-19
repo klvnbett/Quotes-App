@@ -3,7 +3,7 @@ import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quotes-detail',
-  templateUrl: './quotes-detail.component.html',
+  templateUrl: './quote-detail.component.html',
   styleUrls: ['./quotes-detail.component.css']
 })
 export class QuoteDetailComponent implements OnInit {
@@ -16,6 +16,21 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
+  // likes():number=0;
+  // clickCount_likes():void{
+  //   this.likes++
+  // }
+  // dislikes():number=0;
+  // clickCount_dislikes():void{
+  //   this.dislikes
+  // }
+  upvote(){
+    this.quote.likes+=1;
+  }
+  downvote(){
+    this.quote.dislikes+=1;
+  }
+
 
 
 
