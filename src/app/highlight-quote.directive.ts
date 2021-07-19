@@ -1,14 +1,14 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appQuoteHighlight]'
+  selector: '[appHighlightQoute]'
 })
-export class QuoteHighlightDirective {
+export class HighlightQouteDirective {
 
   constructor(private elem:ElementRef) { 
   }
   @HostListener("click") onClicks(){
-    this.textDeco("yellow")
+    this.textDeco("green")
   }
 
   @HostListener("dblclick") onDoubleClicks(){
