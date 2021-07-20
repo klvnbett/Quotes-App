@@ -1,1 +1,32 @@
-<p>quote works!</p>
+<div class="overlay">
+    <h1>
+        BEST QUOTES OF ALL TIME
+    </h1>
+    <!-- <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <app-quotes-form (add)="addedQuote($event)"></app-quotes-form>
+        </div> -->
+    <div class="row">
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+        <div class="col-sm-6">
+            <div *ngFor='let quote of quotes; let i=index'>
+                <div id="author">
+
+                    <h4>{{quote.title}}</h4>
+
+                </div>
+                <br>
+                <div>{{myDate|date:'mediumTime'}}</div>
+                <br>
+                <button (click)='toggleDetails(i)' class="btn btn-info toggle">VIEW MORE</button>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='quoteDelete($event,i)'></app-quote-detail>
+
+
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
